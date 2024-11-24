@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semafaro</title>
+    <style>
+        body{
+            background-image: linear-gradient(45deg, blue,pink);
+        }
+        #semafaro{
+            position: absolute;
+            background-color: black;
+            border-radius: 20px;
+            padding: 10px;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        .lamp{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-top: 5px;
+            border-radius: 70px;
+
+        }
+        #red{
+            background-color: rgb(62, 49, 49);
+        }
+        #yellow{
+            background-color:rgb(67, 67, 48);
+
+        }
+        #green{
+            background-color:rgb(32, 33, 32);
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="semafaro">
+        <div class="lamp" id="red"></div>
+        <div class="lamp" id="yellow"></div>
+        <div class="lamp" id="green"></div>
+    </div>
+
+    <script>
+
+        function red(){
+            var  cor=document. getElementById("red");
+            cor.style.backgroundColor= "red"
+        }
+
+        setTimeout(function(){
+                 cor.style.backgroundColor= "rgb(62, 49, 49);"
+            
+                 
+                green()
+
+            },5000)
+    
+
+
+
+
+        
+        function yellow(){
+            var  cor=document. getElementById("yellow");
+            cor.style.backgroundColor= "yellow"
+        }
+
+
+        setTimeout(function(){
+                 cor.style.backgroundColor= "rgb(67, 67, 48);"
+
+                red()
+
+            },5000)
+    
+
+
+    
+        function green(){
+            var  cor=document. getElementById("green");
+            cor.style.backgroundColor= "rgb(57, 245, 5);"
+
+
+
+            setTimeout(function(){
+                 cor.style.backgroundColor= "rgb(32, 33, 32);"
+                yellow()
+
+            },5000)
+    
+        }
+
+        green()
+    </script>
+
+    
+    
+</body>
+</html>
